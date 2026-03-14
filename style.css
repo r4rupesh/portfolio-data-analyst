@@ -1,0 +1,138 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-main: #f8fafc;
+    --accent-blue: #38bdf8;
+    --hover-blue: #0ea5e9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.profile-card {
+    background: var(--card-bg);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--accent-blue);
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.profile-card h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--accent-blue);
+}
+
+/* Buttons & Links */
+.social-links {
+    margin: 25px 0;
+}
+
+.social-links a {
+    color: var(--text-main);
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-blue);
+}
+
+.btn-download {
+    display: inline-block;
+    background: var(--accent-blue);
+    color: #000;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-download:hover {
+    background: var(--hover-blue);
+    transform: scale(1.05);
+}
+
+/* Skills Section */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.skill-card i {
+    font-size: 3rem;
+    color: var(--accent-blue);
+    margin-bottom: 15px;
+}
+
+.skill-card:hover {
+    border-color: var(--accent-blue);
+    background: #273549;
+    cursor: default;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .profile-card {
+        padding: 30px 15px;
+    }
+    .profile-card h1 {
+        font-size: 1.8rem;
+    }
+}
