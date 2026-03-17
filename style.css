@@ -126,6 +126,11 @@ body {
     background: #273549;
     cursor: default;
 }
+li {
+  /* project list style */
+  text-indent: -20px; 
+}
+
 
 /* Mobile Responsive */
 @media (max-width: 600px) {
